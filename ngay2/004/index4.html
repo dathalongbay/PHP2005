@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        #box1 {
+            border: 2px solid red;
+        }
+        #box2 {
+            border: 2px solid green;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            margin-left: 100px;
+            margin-right: 200px;
+        }
+        #box3 {
+            border: 2px solid yellow;
+            margin-top: 100px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <pre>
+      Quy tắc gộp của margin
+        ví dụ
+        box2 có margin-bottom là 20px
+        box3 có margin-top là 100px
+        => 120px ( không đúng )
+        => thực tế cách nhau 100px
+        trình duyệt chọn margin lớn hơn để tạo ra khoảng cách 
+    </pre>
+
+    <div id="box1">
+        <h1>Box 1</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet dolor in iusto laboriosam laborum molestiae necessitatibus ut vel. Animi architecto commodi cumque dicta error laboriosam nam, recusandae repellat voluptas!</p>
+    </div>
+
+    <div id="box2">
+        <h1>Box 2</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet dolor in iusto laboriosam laborum molestiae necessitatibus ut vel. Animi architecto commodi cumque dicta error laboriosam nam, recusandae repellat voluptas!</p>
+    </div>
+
+    <div id="box3">
+        <h1>Box 3</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet dolor in iusto laboriosam laborum molestiae necessitatibus ut vel. Animi architecto commodi cumque dicta error laboriosam nam, recusandae repellat voluptas!</p>
+    </div>
+
+</body>
+</html>
