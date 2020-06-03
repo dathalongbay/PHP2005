@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        #parent1 .child {
+            color: red;
+        }
+
+        .box #para1 {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <pre>
+        - chọn #id nằm trong .class => .class #id {}
+        - chọn .class nằm trong #id => #id .class {}
+    </pre>
+
+    <div id="parent1">
+        <p class="child">Thẻ p child 1</p>
+        <p class="child">Thẻ p child 2</p>
+    </div>
+
+    <div class="box">
+        <p id="para1">#para1</p>
+        <p id="para2">#para2</p>
+        <p id="para3">#para3</p>
+    </div>
+
+</body>
+</html>
