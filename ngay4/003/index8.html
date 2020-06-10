@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        .clearfix::after {
+            display: block;
+            clear: both;
+            content: '';
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            float: left;
+        }
+
+        ul li a {
+            text-decoration: none;
+            display: inline-block;
+            background-color: greenyellow;
+            padding: 20px;
+        }
+
+        ul li a:hover {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul class="clearfix">
+            <li><a href="">Trang chủ</a></li>
+            <li><a href="">Xuất bản</a></li>
+            <li><a href="">Sách</a></li>
+            <li><a href="">Tác giả</a></li>
+            <li><a href="">Xã hội</a></li>
+            <li><a href="">Thế giới</a></li>
+            <li><a href="">Kinh doanh</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
