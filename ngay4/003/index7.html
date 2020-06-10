@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .parent {
+            border: 5px solid red;
+        }
+
+        .child {
+            width: 200px;
+            height: 200px;
+            background-color: greenyellow;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        Vấn đề gặp phải khi sử dụng float
+        - khi có thẻ cha chứa thẻ con mà thẻ con bị float đồng thời thẻ cha không được đặt chiều cao height cụ thể
+        thì dẫn tới việc thẻ con tràn ra ngoài thẻ cha hay nói cách khác thẻ cha không chưa được thẻ con
+        => fix lỗi này bằng kỹ thuật clearfix
+
+        bản chất kỹ thuật clearfix
+        là ::after có thuộc tính clear:both chống bị ảnh hưởng bởi float
+    </pre>
+
+
+    <div class="parent clearfix">
+        <div class="child">
+            Thẻ con bị float
+        </div>
+    </div>
+
+</body>
+</html>
