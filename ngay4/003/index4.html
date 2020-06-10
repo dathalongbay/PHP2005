@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        .parent1 {
+
+        }
+
+        .child1 {
+            float: right;
+            width: 150px;
+            height: 150px;
+            border: 5px solid orange;
+        }
+
+        .child2 {
+            border: 5px solid green;
+            background-color: greenyellow;
+        }
+
+        .child3 {
+            float: right;
+            width: 150px;
+            height: 150px;
+            border: 5px solid orange;
+        }
+
+        .child4 {
+            border: 5px solid green;
+            background-color: greenyellow;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    <pre>
+        ví dụ thuộc tính clear trong CSS
+    </pre>
+
+    <h1>Demo không sử dụng clear</h1>
+
+    <div class="parent1">
+        <div class="child1">Sử dụng float</div>
+        <div class="child2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolorem doloremque error esse eveniet exercitationem facere fugit hic iste nam nostrum obcaecati odit pariatur repellendus repudiandae, saepe sit soluta vitae!</div>
+    </div>
+
+    <h1 style="clear: both">Demo có sử dụng clear</h1>
+
+    <div class="parent2">
+        <div class="child3">Sử dụng float</div>
+        <div class="child4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae deleniti est facilis in ipsam nam nesciunt optio praesentium ratione repellat! Cupiditate eveniet id laborum officia perspiciatis rerum voluptas? Debitis, labore!</div>
+
+    </div>
+
+</body>
+</html>
