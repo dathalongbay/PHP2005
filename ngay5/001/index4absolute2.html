@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        /* reset css đơn giản */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #parent {
+            position: relative;
+            margin-top: 50px;
+            margin-left: 100px;
+            background-color: orange;
+            width: 300px;
+            height: 300px;
+        }
+
+        #target1 {
+            width: 100px;
+            height: 100px;
+            background-color: darkviolet;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div id="parent">
+    <div id="target1">
+        Target1
+    </div>
+</div>
+
+<pre>
+    Trường hợp 2 của absolute :
+    khi mà thẻ con có position: absolute; vả thẻ đó có thẻ mẹ có position là relative
+    thì thẻ con sẽ lấy vị trí thẻ mẹ làm gốc tọa độ di chuyển
+</pre>
+
+
+</body>
+</html>

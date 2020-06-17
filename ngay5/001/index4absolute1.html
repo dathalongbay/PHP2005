@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        /* reset css đơn giản */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #target1 {
+            margin-top: 20px;
+            margin-left: 30px;
+            width: 100px;
+            height: 100px;
+            background-color: darkviolet;
+            position: absolute;
+            top: 100px;
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="parent">
+    <div id="target1">
+        Target1
+    </div>
+</div>
+
+<pre>
+    Trường hợp 1 của absolute :
+    khi mà thẻ có position: absolute; nhưng thẻ đó nằm trong 1 thẻ có position là static mặc định
+    hoặc thẻ con có position: absolute; nó nằm trực tiếp trong thẻ body
+    thì nó sẽ lấy gốc tọa độ của thẻ body làm mốc
+    https://prnt.sc/t1dgma
+</pre>
+
+
+</body>
+</html>
