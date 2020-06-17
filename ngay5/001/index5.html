@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .clearfix::after {
+            clear: both;
+            content: '';
+            display: block;
+        }
+
+        .container {
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            border-left: 1px solid red;
+            border-right: 1px solid red;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav > ul > li {
+            float: left;
+            padding: 20px;
+            background-color: pink;
+            font-size: 28px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* menu cấp 2 trở đi */
+        nav > ul ul {
+            display: none;
+        }
+
+        nav li {
+            position: relative;
+        }
+
+        nav li > ul {
+            position: absolute;
+            top: 72px;
+            left: 0;
+        }
+
+        nav li:hover > ul {
+            display: block;
+            width: 200px;
+            background-color: pink;
+        }
+
+        nav li li {
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <ul class="clearfix">
+                <li>
+                    <a href="">Thời sự</a>
+                    <ul>
+                        <li><a href="">Giao thông</a></li>
+                        <li><a href="">Mekong</a></li>
+                        <li><a href="">Nông nghiệp sạch</a></li>
+                        <li><a href="">Tuyến đầu chống dịch</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Góc nhìn</a>
+                    <ul>
+                        <li><a href="">Góc nhìn 1</a></li>
+                        <li><a href="">Góc nhìn 2</a></li>
+                        <li><a href="">Góc nhìn 3</a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Thế giới</a>
+                    <ul>
+                        <li><a href="">Thế giới 1</a></li>
+                        <li><a href="">Thế giới 1</a></li>
+                        <li><a href="">Thế giới 1</a></li>
+
+
+                    </ul>
+                </li>
+                <li><a href="">Video</a></li>
+                <li><a href="">Kinh doanh</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</body>
+</html>
