@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #div1 {
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+
+        #div2 {
+            width: 150px;
+            height: 150px;
+            background-color: greenyellow;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            z-index: 2;
+        }
+
+        #div3 {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <pre>
+        z-index ( chiều sâu )
+        chú ý : z-index không làm việc position:static;
+        làm việc position: absolute, sticky, fixed, relative;
+        z-index càng cao thì càng nằm bên trên
+    </pre>
+
+    <div id="div1">1</div>
+    <div id="div2">2</div>
+    <div id="div3">3</div>
+
+</body>
+</html>
