@@ -5,19 +5,31 @@
     <title>Title</title>
 
     <style type="text/css">
-        body {
-            height: 1000px;
-            background-image: url("abc.jpg");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+        .demo {
+            height: 500px;
+            background: violet url("abc.jpg") no-repeat top right;
         }
     </style>
 </head>
 <body>
 
     <pre>
-        background-attachment: có muốn có định ảnh nền hay không
+        background: cách viết tắt rút gọn của các thuộc tính
+        background: A B C D E;
+        trong đó
+        A là giá trị background-color
+        B là giá trị  background-image
+        C là giá trị  background-repeat
+        D là giá trị  background-attachment
+        E là giá trị background-position
+
+        nếu mà không cần thuộc tính nào thì chỉ cần bỏ giá trị
+        của thuộc tính đó đi
     </pre>
+
+    <div class="demo">
+        background shorthand
+    </div>
 
 </body>
 </html>
