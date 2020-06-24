@@ -75,6 +75,38 @@
             width: 33.3%;
             padding: 20px;
         }
+
+
+        /* CSS cho mobile và máy tính bảng */
+        @media (max-width:600px) { /* begin media query  max-width:600px */
+
+            .main-nav nav li {
+                float: none;
+            }
+
+            .main-nav nav li a {
+                width: 100%;
+                text-align: center;
+            }
+
+            .site-wrap .sidebar {
+                width: 100%;
+                float: none;
+            }
+
+            .site-wrap main {
+                width: 100%;
+                float: none;
+            }
+
+            main .service-item {
+                float: none;
+                width: 100%;
+                padding: 20px;
+            }
+
+        } /* end media query max-width:600px */
+
     </style>
 </head>
 <body>
