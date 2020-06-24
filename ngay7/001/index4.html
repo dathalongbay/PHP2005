@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+
+        /* CSS mặc định */
+        body {
+            color: yellow;
+        }
+
+        @media screen and (max-width: 920px){
+            /* CSS áp dụng cho màn hình từ 920 trở lên */
+            body {
+                color: darkviolet;
+            }
+        }
+
+        @media screen and (max-width: 720px){
+            /* CSS áp dụng cho màn hình từ 720 trở lên */
+            body {
+                color: red;
+            }
+        }
+
+        @media screen and (max-width: 520px){
+            /* CSS áp dụng cho màn hình từ 520px trở lên */
+            body {
+                color: green;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Demo nhiều @media trong 1 file</h1>
+    <p>
+        Nếu sử dụng min-width trong nhiều @media
+        thì nên viết theo thứ tự tăng dần
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolor dolorem eaque excepturi harum, ipsam iusto, modi nobis non placeat porro rem repudiandae voluptatem. Cumque iure necessitatibus officiis possimus quis.
+    </p>
+
+
+</body>
+</html>
