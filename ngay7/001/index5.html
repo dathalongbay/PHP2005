@@ -13,7 +13,68 @@
             box-sizing: border-box;
         }
 
+        .clearfix::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
 
+        .site-wrap header {
+            width: 100%;
+            background-color: #dddddd;
+            height: 200px;
+            text-align: center;
+        }
+
+        .main-nav nav {
+            width: 100%;
+            background-color: greenyellow;
+        }
+
+        .main-nav nav li {
+            list-style: none;
+            float: left;
+        }
+
+        .main-nav nav li a {
+            display: inline-block;
+            padding: 20px;
+            text-decoration: none;
+            font-size: 20px;
+            background-color: greenyellow;
+        }
+
+        .site-wrap footer {
+            height: 150px;
+            background-color: #dddddd;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .site-wrap .sidebar {
+            width: 30%;
+            background-color: #dddddd;
+            float: left;
+            min-height: 400px;
+        }
+
+        .site-wrap .sidebar aside {
+            padding: 50px 0;
+            margin-bottom: 30px;
+        }
+        .site-wrap main {
+            width: 70%;
+            float: left;
+            min-height: 400px;
+            text-align: center;
+        }
+
+
+        main .service-item {
+            float: left;
+            width: 33.3%;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
@@ -24,9 +85,9 @@
             <h1>Header trang web</h1>
         </header>
 
-        <section>
+        <section class="main-nav">
             <nav>
-                <ul>
+                <ul class="clearfix">
                     <li><a href="">Trang chủ</a> </li>
                     <li><a href="">Sản phẩm</a> </li>
                     <li><a href="">Dịch vụ</a> </li>
@@ -36,8 +97,8 @@
             </nav>
         </section>
 
-        <div>
-            <section>
+        <div class="clearfix">
+            <section class="sidebar">
                 <aside>
                     Siderbar của trang web
                 </aside>
@@ -52,6 +113,22 @@
             <main>
                 <h1>Nội dung chính của trang</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet commodi consectetur ea earum eveniet explicabo illo impedit necessitatibus omnis quaerat quis quo quod repellat reprehenderit, sequi tempora veritatis. Maxime, voluptatem.</p>
+
+                <h3>Các dịch vụ của chúng tôi</h3>
+                <div class="service clearfix">
+                    <div class="service-item">
+                        <h4>Thiết kế web</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet commodi consectetur ea earum eveniet</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Lập trình web</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet commodi consectetur ea earum eveniet</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Lập trình mobile</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet commodi consectetur ea earum eveniet</p>
+                    </div>
+                </div>
             </main>
         </div>
 
