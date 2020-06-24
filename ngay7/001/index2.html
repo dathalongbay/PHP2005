@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        /* CSS mặc định áp dụng cho mọi màn hình */
+        body {
+            background-color: violet;
+        }
+
+        @media screen and (max-width: 580px){
+            body {
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        Media Queries được sử dụng cho phần responsive
+        responsive là thiết kế web đáp ứng trên nhiều thiết bị mà có độ rộng màn hinh khác nhau
+        ví dụ điện thoại , ipad , laptop , màn hình lớn
+        ví dụ 1 về MQ :
+        @media screen and (min-width: 480px) {
+            /* đoạn css áp dụng cho màn hình có độ rộng từ 480px trở lên ( 480 - vô cực ) */
+        }
+        ví dụ 2 về MQ :
+        @media screen and (max-width: 480px) {
+            /* đoạn css áp dụng cho màn hình có độ rộng từ 480px trở xuống ( 0 đến 479px ) */
+        }
+        Chú ý : CSS chạy từ trên xuống dưới nên đoạn css nào cùng chọn 1 selector thì
+        dòng code nào viết sau dòng code đó có ảnh hưởng lớp hơn
+        ví dụ body { color: red }
+        body { color: green }
+        kết quả thẻ body có chữ màu xanh
+    </pre>
+
+
+
+
+
+</body>
+</html>
