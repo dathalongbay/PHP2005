@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Thêm sách CNTT</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <form name="addbook" action="" method="post">
+                    <div class="form-group">
+                        <label>Tên sách</label>
+                        <input type="text" name="book_name" value="" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Ảnh sách</label>
+                        <input type="file" name="book_image" value="" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Giá tiền sách</label>
+                        <input type="number" name="book_price" value="" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mô tả</label>
+                        <textarea name="book_desc" class="form-control"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ngày xuất bản</label>
+                        <input type="datetime-local" name="book_date" value="" class="form-control">
+
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" name="submit" value="Tạo mới" class="btn btn-info">
+
+                        Xem thêm tại đây :
+                        https://www.w3schools.com/bootstrap4/bootstrap_forms_inputs.asp
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
