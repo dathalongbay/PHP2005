@@ -16,6 +16,17 @@
         <div class="row">
             <div class="col-sm-12">
 
+                <form class="form-inline" name="search" method="get" action="" style="margin: 20px">
+                    <input class="form-control" name="keyword" value="" style="width: 150px" >
+
+                    <select name="status" class="form-control">
+                        <option>Trạng thái xuất bản</option>
+                        <option value="2">Đã xuất bản</option>
+                        <option value="1">Chưa xuất bản</option>
+                    </select>
+                    <input type="submit" name="submit" value="Tìm kiếm" class="btn btn-success">
+                </form>
+
                 <table class="table">
                     <thead>
                         <tr>
@@ -84,6 +95,15 @@
                         </tr>
                     </tbody>
                 </table>
+
+
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
 
             </div>
         </div>
