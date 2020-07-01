@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .target1 {
+            width: 100px;
+            height: 100px;
+            background-color: #0c5460;
+            margin: 200px;
+        }
+
+        .target1:hover {
+            transform: matrix(2,0.2,0,1,100,20);
+        }
+    </style>
+</head>
+<body>
+
+    <pre>
+       matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())
+        chú ý không sử dụng đơn vị trong khi sử dụng matrix
+    </pre>
+
+    <div class="target1">
+        đemo transform
+    </div>
+
+</body>
+</html>
