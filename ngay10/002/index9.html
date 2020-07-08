@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        // khai báo giá trị mặc  định cho tham số
+        function tinhchuviHCN(a = 1,b = 1) {
+            var p = (a + b)*2;
+            return p;
+        }
+
+
+        // gọi hàm
+        // truyền biến cho tham số của function
+        var c = 5;
+        var d = 4;
+        var chuvi = tinhchuviHCN(c,d);
+        console.log(chuvi);
+    </script>
+
+</body>
+</html>
