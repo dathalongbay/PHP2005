@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <pre>
+        Chọn 1 thẻ html dựa vào thuộc tính id
+        document.getElementById("id")
+        Thay đổi nội dung text của thẻ đó gọi đến thuộc tính .innerText
+        Thay đổi nội dung chứa html của thẻ đo gọi đến thuộc tính .innerHTML
+    </pre>
+
+    <div id="targetA">Thẻ div số 1</div>
+    <div id="targetB">Thẻ div số 2 <strong>chứa HTML</strong></div>
+
+    <script type="text/javascript">
+        document.getElementById("targetA").innerText = "thay đổi văn bản trong html bằng js";
+        document.getElementById("targetB").innerHTML = "<a href='https://www.w3schools.com/js/js_output.asp'>W3school</a>";
+    </script>
+</body>
+</html>
