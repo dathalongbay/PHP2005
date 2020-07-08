@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <pre>
+        Hàm trong js
+        function là 1 tập hợp các câu lệnh để thực hiện 1 chức năng cụ thể
+        cho phép tái sử dụng lại nhiều lần
+        - làm quen khái niệm là tham số chính là những biến được tạo ra là đầu vào
+        input của function
+        - làm quen câu lệnh return trả về kết quả của 1 hàm và nó là câu lệnh cuối cùng của hàm
+
+        // hàm tính S của HCN
+        // biết input đầu vào phải biết độ dài của 2 cạnh
+        // input chính là tham số của hàm
+        // a và b là tham số của function tinhdientichHCN
+
+        function tinhdientichHCN(a, b) {
+            var s = a*b;
+            // output của hàm là s kết quả
+            return s;
+        }
+
+        muốn sử dụng hàm thì ta phải gọi hàm
+       var dt = tinhdientichHCN(3,4);
+    </pre>
+
+    <script type="text/javascript">
+        function tinhdientichHCN(a,b){
+            var s = a*b;
+            return s;
+        }
+
+        // gọi hàm
+        var dt = tinhdientichHCN(3,4);
+        console.log("S là : " + dt);
+
+        // tự viết 1 function tính Chu vi hình chữ nhật
+    </script>
+
+</body>
+</html>
