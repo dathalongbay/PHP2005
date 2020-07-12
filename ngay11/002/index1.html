@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <pre>
+        Mảng trong javascript
+        Kiểu dữ liệu : số , chuỗi , boolean , null những kiểu này chỉ chứa được 1 giá trị đơn
+        thôi
+        Kiểu mảng chứa được nhiều giá trị trong 1 biến
+        Cú pháp khai báo mảng
+        var cities = ["hà nội", "hồ chí minh", "đà nẵng", "hải phòng"];
+
+        trong 1 mảng các phần tử sẽ được phân tách bởi dấu ,
+        trong mảng chứa các phần tử con
+        mỗi phần tử được cấu tạo bởi key và value
+        key là chỉ số của phần tử ( key bắt đầu từ 0 )
+        value là giá trị của phần từ
+    </pre>
+
+    <ul id="target">
+
+    </ul>
+
+    <script>
+        var cities = ["hà nội", "hồ chí minh", "đà nẵng", "hải phòng"];
+        console.log(cities);
+
+        // in ra các giá trị của các phần từ trong mảng thông qua key
+        console.log(cities[0]);
+        console.log(cities[1]);
+        console.log(cities[2]);
+        console.log(cities[3]);
+
+        // dùng vòng lặp để duyệt mảng
+        var html = '';
+
+        // cities.length trả về độ dài của vòng lặp => 4
+        var length = cities.length;
+        for(var i = 0; i < length; i++) {
+            html += '<li>Key là '+ i + ' value là : ' +cities[i]+'</li>';
+        }
+
+        document.getElementById('target').innerHTML = html;
+    </script>
+
+</body>
+</html>
