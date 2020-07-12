@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <pre>
+        Sự khác nhau của while() và do ... while()
+        - while() luôn kiểm tra điều kiện chạy trước khi thực hiện vòng lặp
+        - do ... while() chỉ kiểm tra điều kiện chạy của vòng lặp từ lần thứ 2
+        lần đầu tiên ko kiểm tra điều kiện chạy
+
+        trong vd bên dưới điều chạy của vòng lặp do ... while (n <= 18);
+        nhưng ngay từ đầu biến n = 20;
+        như vậy ko thỏa mãn điều kiện chạy
+        nhưng do while() thì vẫn chạy đầu tiên
+    </pre>
+
+    <script>
+        // sự khởi đầu của biến đếm
+        var n = 20;
+
+        do {
+
+            console.log(n);
+
+            n++;
+        } while(n <= 18);
+    </script>
+
+</body>
+</html>
