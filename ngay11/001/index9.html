@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <pre>
+        cú pháp do ... while
+
+        // sự khởi đầu của biến đếm
+        do {
+            // code thực thi của vòng lặp
+
+            // sự thay đổi của biến đếm
+        }while(điều kiện chạy của vòng lặp);
+    </pre>
+
+    <div id="target">
+
+    </div>
+
+    <script>
+
+        // sự khởi đầu của biến đếm
+        var n = 2;
+        var html = '';
+        do {
+
+            html += "<br> Dong thứ " + n;
+            // mỗi lần chạy tăng thêm 2 đơn vị
+            n += 2;
+        }while(n <= 20);
+
+        document.getElementById('target').innerHTML = html;
+    </script>
+
+</body>
+</html>

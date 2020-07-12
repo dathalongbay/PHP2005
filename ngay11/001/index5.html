@@ -17,9 +17,22 @@
         <p>********</p>
     </div>
 
-    <div id="target">
+    <div id="target" style="color: green">
 
     </div>
+
+    <script>
+        var star = '';
+        var html = '';
+        for(var i = 2; i <= 8; i += 2) {
+            star += '**';
+            html += '<p>';
+            html += star;
+            html += '</p>';
+        }
+
+        document.getElementById('target').innerHTML = html;
+    </script>
 
 </body>
 </html>
