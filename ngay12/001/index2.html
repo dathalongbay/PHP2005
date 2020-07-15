@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>Cách nhận biết 1 biến là 1 mảng bằng javascript</h1>
+
+    <script type="text/javascript">
+
+        // nếu sử dụng typeof biến là 1 mảng thì trả object
+        var cities = ["hà nội", "hồ chí minh", "đà nẵng", "hải phòng"];
+
+
+        console.log("typeof : " + typeof cities);
+
+
+        // cách 1 để nhận biết 1 biến là mảng
+        console.log("Cách 1 : " + Array.isArray(cities));
+
+
+        var test = 5;
+        // cách 2 sử dụng từ khóa instanceof Array
+        console.log(cities instanceof Array);
+        console.log(cities instanceof Array);
+        console.log(test instanceof Array);
+
+    </script>
+</body>
+</html>
