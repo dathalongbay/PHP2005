@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <pre>
+        COUNTDOWN đếm ngược
+        năm - tháng - ngày - giờ - phút - giây đến giao thừa 2021
+        0 năm - 5 tháng - 12 ngày - 10 giờ - 10 phút - 20 giây
+    </pre>
+
+    <pre>
+        gợi ý là sử dụng kiểu thời gian timestamp
+        trong js
+        chính là thời gian tính từ 1 - 1 - 1970
+
+    </pre>
+
+    <script type="text/javascript">
+
+        // lấy ra thời gian hiện và convert nó về mili giây tính từ 1.1.1970
+        var d = new Date();
+
+        // trả về mili giây 1 s = 1000 ms
+        console.log(d.getTime());
+
+        // new Date(year, month, day, hours, minutes, seconds, milliseconds)
+        var d1 = new Date(2021,0,0,0,0,0,0);
+        console.log(d1.getTime());
+
+        // con bao nhiêu ms nữa là đến giao thừa tết dương
+        var t = d1.getTime() - d.getTime();
+        console.log(t);
+
+        // 2 tháng 5 ngày 3 giờ 10 phút 20 giây
+
+    </script>
+
+</body>
+</html>
