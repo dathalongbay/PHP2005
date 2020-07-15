@@ -9,7 +9,7 @@
     <label>Nhập ngày sinh theo định dạng YYYY-MM-DD</label>
     <input name="birth" id="birth" value="" placeholder="YYYY-MM-DD">
 
-    <button>Tính tuổi</button>
+    <button id="calc">Tính tuổi</button>
 
     <pre>
         gợi ý :
@@ -17,6 +17,24 @@
         ví dụ : var f = new Date("1997-10-22");
         => f.getFullYear() sẽ trả về số năm - trừ cho số năm hiện tại sẽ ra tuổi
     </pre>
+
+    <script type="text/javascript">
+        document.getElementById("calc").onclick = function () {
+            var birth = document.getElementById("birth").value;
+
+            console.log(birth);
+
+            var f = new Date(birth);
+
+            console.log(f);
+
+            var n = new Date();
+
+            var age = n.getFullYear() - f.getFullYear();
+
+            alert("Bạn đã " + age + " tuổi");
+        };
+    </script>
 
 </body>
 </html>
