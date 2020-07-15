@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <pre>
+        Các phương thức lấy thời gian trong js
+        getFullYear()	trả về năm
+        getMonth()	tháng (0-11)
+        getDate()	ngày (1-31)
+        getHours()	giờ (0-23)
+        getMinutes()	phút (0-59)
+        getSeconds()	giây (0-59)
+        getMilliseconds()	mili giây (0-999)
+        getTime()	lấy thời gian timestamp là 1 loại thời gian
+        dùng để tính toán (số mili giây tính từ 1.1.1970)(milliseconds since January 1, 1970)
+        getDay()	số ngày trong tuần (0-6)
+    </pre>
+
+    <div id="target" style="color: red">
+        <div id="year"></div>
+        <div id="month"></div>
+        <div id="day"></div>
+        <div id="hour"></div>
+        <div id="minutes"></div>
+        <div id="second"></div>
+    </div>
+
+    <script type="text/javascript">
+
+
+
+
+
+        // thực hiện 1 hàm theo chu kỳ cố định
+        setInterval(function () {
+
+            var d1 = new Date();
+
+            document.getElementById("year").innerHTML = d1.getFullYear();
+            document.getElementById("month").innerHTML = d1.getMonth();
+            document.getElementById("day").innerHTML = d1.getDate();
+            document.getElementById("hour").innerHTML = d1.getHours();
+            document.getElementById("minutes").innerHTML = d1.getMinutes();
+            document.getElementById("second").innerHTML = d1.getSeconds();
+        }, 1000);
+
+
+    </script>
+
+</body>
+</html>
