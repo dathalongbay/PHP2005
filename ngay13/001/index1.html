@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <pre>
+        Javascript object ( đối tượng trong js )
+        Thuộc tính chỉ ra đặc điểm tính chất của object
+        Phương thức chỉ ra hành động cụ thể của object
+        để khai báo object sử dụng {}
+    </pre>
+
+    <script type="text/javascript">
+        var car = {
+            name:"toyota",
+            model: "vios",
+            weight: 1000,
+            price: 500000000,
+            start: function () {
+                // sử dụng từ khóa this truy cập đến các thuộc tính
+                // và các method bên trong object
+                console.log(this.name + " begin method start of car");
+
+
+
+            },
+            drive: function () {
+                console.log(this.name + " method drive of car");
+            }
+        };
+
+        // thử in object
+        console.log(car);
+
+        // truy cập vào thuộc tính
+        console.log(car.name);
+        console.log(car.model);
+        console.log(car.weight);
+        console.log(car.price);
+
+        // truy cập method
+        car.start();
+        car.drive();
+    </script>
+
+
+
+</body>
+</html>
