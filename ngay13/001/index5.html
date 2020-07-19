@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        từ khóa const có phạm vi giống như từ khóa let
+        biến được khai báo bằng từ khóa const thì không được phép gán lại giá trị
+    </pre>
+
+    <script type="text/javascript">
+        const PI = 3.141592653589793;
+
+        console.log(PI);
+        // Uncaught TypeError: Assignment to constant variable.
+        PI = 3.14;      // This will give an error
+        PI = PI + 10;
+    </script>
+
+</body>
+</html>
