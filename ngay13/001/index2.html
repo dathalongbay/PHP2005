@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        Phạm vi của biến
+        1 - Biến toàn cục
+        khởi tạo bên ngoài function và kết thúc khi script javascript kết thúc
+        2 - Biến cục bộ
+        khởi tạo bên trong function và kết thúc trước dấu } kết thúc của function
+        - tham số khi khai báo function(param1, param2 ...)
+        nhưng tham số param là biến cục bộ chỉ có ảnh hưởng hoạt động trong function
+    </pre>
+
+    <script type="text/javascript">
+
+        function tinhChuViHinhCN(a, b) {
+            // a và b là 2 tham số trong function nên là biến cục bộ
+            // a và b chỉ có tác dụng trong function
+
+            // biến p được khai báo bên trong function nên p cũng là biến cục bộ
+            var p;
+            p = (a+b)*2;
+
+            return p;
+        }
+
+        /**
+         * 3 biến ở bên dưới được khai báo bên ngoài function
+         * là các biến toàn cục
+         */
+        var chuvi;
+        var canhA = 5;
+        var canhB = 8;
+
+        chuvi = tinhChuViHinhCN(canhA, canhB);
+
+
+        console.log("chu vi " + chuvi);
+
+    </script>
+
+    <script src="test.js"></script>
+
+</body>
+</html>
