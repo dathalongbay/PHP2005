@@ -9,19 +9,19 @@
         .calc {
             border:1px solid gray;
             padding: 20px;
-            width: 300px;
+            width: 650px;
         }
 
         .calc textarea {
-            width: 260px;
+            width: 560px;
             height: 100px;
         }
 
         .calc .control-calc > div {
-            padding: 10px;
+            padding: 20px;
             margin: 10px;
             border: 1px solid green;
-            width: 40px;
+            width: 70px;
             display: inline-block;
         }
     </style>
@@ -29,12 +29,28 @@
 </head>
 <body>
 
+    <pre>
+        Xây dựng 1 máy tính bỏ túi đơn giản bằng jquery
+        Gợi ý làm bài :
+        - sử dụng sự kiện click chuột trong jquery
+        - sử dụng nối chuỗi trong thẻ textarea
+        lấy chuỗi hiện tại trong textarea + giá trị phù hợp khi click vào 1 nút
+        - sử dụng hàm eval() trong js https://www.w3schools.com/jsref/jsref_eval.asp
+        để tính toán khi người dùng click vào nút = trong calculator
+        eval(giá trị trong thẻ textarea)
+        - các toán tử như mũ 2 , 1/x , sqrt xem tại
+        https://www.w3schools.com/js/js_math.asp
+        - backspace nút này sẽ xóa đi ký tự cuối cùng trong textarea
+        có thể sử dụng hàm cắt chuỗi trong js để giải quyêt
+        https://www.w3schools.com/js/js_string_methods.asp
+    </pre>
+
     <div class="container">
         <div class="row">
             <div class="col-md-12">
 
                 <div class="calc">
-                    <textarea></textarea>
+                    <textarea id="result"></textarea>
 
                     <div class="control-calc">
                         <div>C</div>
@@ -54,6 +70,7 @@
                         <div>/</div>
                         <div>%</div>
                         <div>x^2</div>
+                        <div>SQRT()</div>
                         <div>1/x</div>
                         <div style="width: 140px"><- backspace</div>
                         <div>=</div>
