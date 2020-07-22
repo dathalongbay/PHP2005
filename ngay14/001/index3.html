@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        #target {
+            padding: 20px;
+            border: 1px solid red;
+        }
+
+        .demo {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <pre>
+        xóa nội dung html
+        - addClass() thêm mới class css
+        - removeClass() xóa bỏ class css
+        - toggleClass() bật/tắt class css
+    </pre>
+
+    <div id="target">
+        Nội dung bên trong #target
+        <p>Thẻ p demo</p>
+    </div>
+
+    <button id="addClass">addClass</button>
+    <button id="removeClass">removeClass</button>
+    <button id="toggleClass">toggleClass</button>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $("#addClass").on('click', function () {
+                $("#target").addClass("demo");
+            });
+
+            $("#removeClass").on('click', function () {
+                $("#target").removeClass("demo");
+            });
+
+            $("#toggleClass").on('click', function () {
+                $("#target").toggleClass("demo");
+            });
+        });
+    </script>
+
+</body>
+</html>
