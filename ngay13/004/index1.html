@@ -50,30 +50,30 @@
             <div class="col-md-12">
 
                 <div class="calc">
-                    <textarea id="result"></textarea>
+                    <textarea id="result" style="font-size: 20px"></textarea>
 
                     <div class="control-calc">
-                        <div>C</div>
-                        <div>1</div>
-                        <div>2</div>
-                        <div>3</div>
-                        <div>4</div>
-                        <div>5</div>
-                        <div>6</div>
-                        <div>7</div>
-                        <div>8</div>
-                        <div>9</div>
-                        <div>0</div>
-                        <div>+</div>
-                        <div>-</div>
-                        <div>*</div>
-                        <div>/</div>
-                        <div>%</div>
-                        <div>x^2</div>
-                        <div>SQRT()</div>
-                        <div>1/x</div>
-                        <div style="width: 140px"><- backspace</div>
-                        <div>=</div>
+                        <div id="c">C</div>
+                        <div class="num">1</div>
+                        <div class="num">2</div>
+                        <div class="num">3</div>
+                        <div class="num">4</div>
+                        <div class="num">5</div>
+                        <div class="num">6</div>
+                        <div class="num">7</div>
+                        <div class="num">8</div>
+                        <div class="num">9</div>
+                        <div class="num">0</div>
+                        <div class="num">+</div>
+                        <div class="num">-</div>
+                        <div class="num">*</div>
+                        <div class="num">/</div>
+                        <div class="num">%</div>
+                        <div id="x2">x^2</div>
+                        <div id="sqrt">SQRT()</div>
+                        <div id="dividex">1/x</div>
+                        <div id="backspace" style="width: 140px"><- backspace</div>
+                        <div id="equal">=</div>
                     </div>
                 </div>
 
@@ -81,6 +81,79 @@
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $("#sqrt").on("click", function () {
+                var content = $("textarea#result").val();
+                content = parseFloat(content);
+
+                var result  = 0;
+                if (content > 0) {
+                    result = Math.sqrt(content);
+                }
+
+                $("textarea#result").val(result);
+            });
+
+            $("#x2").on("click", function () {
+                var content = $("textarea#result").val();
+                content = parseFloat(content);
+
+                var result  = 0;
+                if (content > 0) {
+                    result = content*content;
+                }
+
+                $("textarea#result").val(result);
+            });
+
+            $("#dividex").on("click", function () {
+                var content = $("textarea#result").val();
+                content = parseFloat(content);
+
+                var result  = 0;
+                if (content > 0) {
+                    result = 1/content;
+                }
+
+                $("textarea#result").val(result);
+            });
+
+            $("#backspace").on("click", function () {
+                var content = $("textarea#result").val();
+                content = content.substr(0, content.length - 1);
+
+                $("textarea#result").val(content);
+            });
+
+            $("#c").on("click", function () {
+                $("textarea#result").val("");
+            });
+
+            $("#equal").on("click", function () {
+
+                var content = $("textarea#result").val();
+
+                var result = eval(content);
+                // set
+                $("textarea#result").val(result);
+            });
+
+            $(".num").on("click", function () {
+                // get
+                var content = $("textarea#result").val();
+
+                content += $(this).text();
+                // set
+                $("textarea#result").val(content);
+            });
+
+        });
+    </script>
 
 
 </body>
