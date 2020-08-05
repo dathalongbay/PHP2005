@@ -33,5 +33,11 @@
     echo '<div>chào $hoten</div>';
     ?>
 
+    <pre>
+        làm sao để in ra giá trị của biến trong dấu '' của lệnh echo
+        => giải pháp sử dụng phép nối chuỗi
+    </pre>
+
+    <?php echo '<div>'.$hoten.'</div>'; ?>
 </body>
 </html>
