@@ -32,5 +32,18 @@
     <p>Dùng vòng lặp foreach in ra 1 thẻ select với các thẻ option
     từ $cities</p>
 
+    <select name="cities">
+        <?php foreach($cities as $keyCities => $city) {
+            echo "<option value=\"$keyCities\">$city</option>";
+        } ?>
+    </select>
+
+    <p>Cách 2</p>
+
+    <select name="cities">
+        <?php foreach($cities as $keyCities => $city) { ?>
+            <option value="<?php echo $keyCities ?>"><?php echo $city ?></option>
+        <?php } ?>
+    </select>
 </body>
 </html>
