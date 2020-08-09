@@ -34,7 +34,7 @@
         return $money;
     }
 
-    $z = 1095;
+    $z = 1096;
     $y = 0.08;
     $x = 100000000;
 
@@ -42,7 +42,8 @@
 
     if ($z > 365) {
 
-        $year = (int)$z/365;
+        $year = $z/365;
+        $year = floor($year);
 
         echo "<br> year : " . $year;
         $dayRemain = $z-($year*365);
@@ -58,7 +59,7 @@
         }
 
         if ($dayRemain > 0) {
-            $total += bankAccount($x, $y, $dayRemain);
+            $total = bankAccount($total, $y, $dayRemain);
             echo "<br> total : " . $total;
         }
 
