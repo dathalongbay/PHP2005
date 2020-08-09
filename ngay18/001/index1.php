@@ -16,5 +16,36 @@
         sau Z ngày .
     </pre>
 
+    <?php
+    /**
+     * @param $x là số tiền
+     * @param $y là lãi xuất
+     * @param $z là số ngày khách đã gửi tiền
+     */
+    function bankAccount($x, $y, $z) {
+
+        // tính lãi xuất theo ngày
+        $interestDay = $y/365;
+
+        // lợi nhuận sẽ là số tiền * số ngày * lãi xuất theo ngày
+        $profit = $x*$z*$interestDay;
+        $money = $x + $profit;
+
+        return $money;
+    }
+
+    $z = 365;
+    $y = 0.08;
+    $x = 100000000;
+
+    $total = 0;
+
+
+    $total = bankAccount($x, $y, $z);
+
+
+    echo "<br> tổng số tiền trong tài khoản của bạn là : " . $total;
+    ?>
+
 </body>
 </html>
