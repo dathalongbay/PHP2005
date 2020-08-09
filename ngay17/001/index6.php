@@ -12,6 +12,27 @@
     <?php
     $a = [9,1,4,2,5,2,100,20,30,11,15,12];
 
+    echo "<pre>";
+    print_r($a);
+    echo "</pre>";
+
+    $count = count($a);
+    $max = $a[0];
+    $min = $a[0];
+    for($i = 0; $i < $count; $i++) {
+        if ($a[$i] > $max) {
+            $max = $a[$i];
+        }
+
+
+        if ($a[$i] < $min) {
+            $min = $a[$i];
+        }
+    }
+
+    echo "<br> min : " . $min;
+    echo "<br> max : " . $max;
+
     ?>
     <pre>
         1 - Cho mảng trên hãy tìm ra giá trị nhỏ nhất trong mảng

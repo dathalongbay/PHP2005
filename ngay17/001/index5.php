@@ -18,6 +18,17 @@
     echo "<pre>";
     print_r($a);
     echo "</pre>";
+
+    $count = count($a);
+    $sum = 0;
+    $avg = 0;
+    for($i = 0; $i < $count; $i++) {
+        $sum += $a[$i];
+    }
+
+    $avg = $sum/$count;
+    echo "<br> tổng : " . $sum;
+    echo "<br> trung bình cộng : " . $avg;
     ?>
 
     <pre>
