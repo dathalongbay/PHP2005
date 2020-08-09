@@ -45,7 +45,7 @@
         echo "<pre>";
         print_r($_POST);
         echo "</pre>";
-        
+
         $money = $_POST["money"];
         $interest = $_POST["interest"];
         $day = $_POST["day"];
