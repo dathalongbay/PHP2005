@@ -20,7 +20,7 @@
         action="process.php" là đích đến của dữ liệu gửi đi từ form
     </pre>
 
-    <form name="demo" action="process.php" method="post">
+    <form name="demo" action="process1.php" method="post">
         <label>Nhập tên</label>
         <input name="ten" value="" type="text">
 

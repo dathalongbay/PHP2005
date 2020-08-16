@@ -23,11 +23,11 @@
 
     // $_GET là 1 mảng kết hợp
     echo "<pre>";
-    print_r($_REQUEST);
+    print_r($_GET);
     echo "</pre>";
 
-    echo "<br> controller : " . $_REQUEST["controller"];
-    echo "<br> action : " . $_REQUEST["action"];
+    echo "<br> controller : " . $_GET["controller"];
+    echo "<br> action : " . $_GET["action"];
     ?>
 
 </body>
