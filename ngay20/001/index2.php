@@ -10,24 +10,10 @@
 <body>
 
     <pre>
-        khai báo mảng kết hợp
+        hàm unset() hủy 1 phần tử trong mảng dựa vào key
     </pre>
 
     <?php
-    // khai báo mảng cách 1
-    $cities = array("hn" => "hà nội", "dn" => "đà nẵng", "hcm" => "hồ chí minh");
-
-    echo "biến cities<pre>";
-    print_r($cities);
-    echo "</pre>";
-
-    // khai báo mảng cách 2
-    $cities1 = ["hn" => "hà nội", "dn" => "đà nẵng", "hcm" => "hồ chí minh"];
-
-    echo "cities1 <pre>";
-    print_r($cities1);
-    echo "</pre>";
-
     $cities3 = [];
 
     // gán các phần tử vào mảng
@@ -39,6 +25,14 @@
     echo "cities3 <pre>";
     print_r($cities3);
     echo "</pre>";
+
+    // hủy 1 phần tử trong mảng theo key
+    unset($cities3["dn"]);
+
+    echo "cities3 <pre>";
+    print_r($cities3);
+    echo "</pre>";
     ?>
+
 </body>
 </html>

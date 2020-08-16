@@ -10,24 +10,16 @@
 <body>
 
     <pre>
-        khai báo mảng kết hợp
+        isset() kiểm tra biến hoặc 1 phần tư trong mảng có tồn tại hay không
+        empty() kiểm tra 1 biến hoặc 1 mảng có rỗng
+        rỗng trả về true
+        không rỗng trả về false
+        !empty() kiểm trả 1 mảng có dữ liệu hay không
+        rỗng thì trả false
+        không rỗng ( có dữ liệu ) trả về true
     </pre>
 
     <?php
-    // khai báo mảng cách 1
-    $cities = array("hn" => "hà nội", "dn" => "đà nẵng", "hcm" => "hồ chí minh");
-
-    echo "biến cities<pre>";
-    print_r($cities);
-    echo "</pre>";
-
-    // khai báo mảng cách 2
-    $cities1 = ["hn" => "hà nội", "dn" => "đà nẵng", "hcm" => "hồ chí minh"];
-
-    echo "cities1 <pre>";
-    print_r($cities1);
-    echo "</pre>";
-
     $cities3 = [];
 
     // gán các phần tử vào mảng
@@ -36,9 +28,7 @@
     $cities3["dn"] = "đà nẵng";
     $cities3["hcm"] = "hồ chí minh";
 
-    echo "cities3 <pre>";
-    print_r($cities3);
-    echo "</pre>";
+  var_dump(!empty($cities3));
     ?>
 </body>
 </html>
