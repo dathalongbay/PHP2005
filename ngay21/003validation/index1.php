@@ -52,6 +52,11 @@
         </div>
 
         <div>
+            <p>Ghi chú ( chỉ được nhập tối đa 200 chữ )</p>
+            <textarea name="note" cols="50" rows="10"></textarea>
+        </div>
+
+        <div>
             <input type="submit" name="sumbit" value="In thông tin" autocomplete="off">
         </div>
     </form>
