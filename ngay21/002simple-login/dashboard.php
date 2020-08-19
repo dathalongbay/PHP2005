@@ -10,6 +10,7 @@ if (!isset($_SESSION["user"])) {
 echo "<pre>";
 print_r($_COOKIE);
 echo "</pre>";
+
 ?>
 <!doctype html>
 <html lang="en">
