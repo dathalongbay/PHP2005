@@ -5,6 +5,11 @@ if (!isset($_SESSION["user"])) {
     header("Location: login.php");
     exit();
 }
+
+
+echo "<pre>";
+print_r($_COOKIE);
+echo "</pre>";
 ?>
 <!doctype html>
 <html lang="en">
