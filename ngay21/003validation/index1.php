@@ -31,6 +31,7 @@ if (isset($_POST) & !empty($_POST)) {
         url là link ví dụ profile.php
         - không hợp lệ
         in ra thông báo lỗi
+        - in ra dữ liệu đã nhập trong form khi có lỗi
     </pre>
 
 
