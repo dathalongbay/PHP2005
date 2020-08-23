@@ -1,3 +1,15 @@
+<?php
+// biến mảng chứa lỗi
+$errors = [];
+
+// có dữ liệu submit đi hay không
+if (isset($_POST) & !empty($_POST)) {
+
+}
+
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,6 +22,18 @@
 <body>
 
     <h1>Profile</h1>
+
+    <pre>
+        khi form profile submit đi nếu hợp lệ
+        chuyển hướng đến file profile.php in ra các dữ liệu lấy được
+        header("Location: url");
+        exit();
+        url là link ví dụ profile.php
+        - không hợp lệ
+        in ra thông báo lỗi
+    </pre>
+
+
 
     <form name="profile" method="post" action="">
         <div>
