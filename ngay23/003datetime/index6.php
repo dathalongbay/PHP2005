@@ -13,6 +13,34 @@
 </head>
 <body>
 
+<?php
+if (isset($_POST) && !empty($_POST)) {
+
+    if (isset($_POST["begin"]) && $_POST["begin"] && isset($_POST["end"]) && $_POST["end"]) {
+        $begin = $_POST["begin"];
+        $end = $_POST["end"];
+        echo "<br> thời gian bắt đầu : " . $begin;
+        echo "<br> thời gian kết thúc : " . $end;
+
+        $beginTime = strtotime($begin);
+        $endTime = strtotime($end);
+        echo "<br> time begin : " . $beginTime;
+        echo "<br> time end : " . $endTime;
+
+        if ($endTime > $beginTime) {
+            $timeLease = $endTime - $beginTime;
+            $timeLeaseDay = $timeLease/86400;
+            $timeLeaseDay = ceil($timeLeaseDay);
+            echo "<br> thời gian thuê : " . $timeLease;
+            echo "<br> thời gian thuê theo ngày : " . $timeLeaseDay;
+        } else {
+            echo "<br> thời gian không hợp lệ";
+        }
+    }
+
+}
+?>
+
 <pre>
         phòng đơn 1 ngày : 200k
         phòng đối 1 ngày : 400k
@@ -22,7 +50,7 @@
         + taxi + 1.000 k
     </pre>
 <div class="container">
-    <form name="demo" action="calc.php" method="post">
+    <form name="demo" action="" method="post">
 
         <div class="form-group">
             <label>Thời gian bắt đầu thuê</label>
