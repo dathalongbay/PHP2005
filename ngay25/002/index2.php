@@ -30,6 +30,7 @@ class SmartPhone extends ClassicPhone{
 
 }
 
+// truy cập từ bên ngoài class
 $sonyZ3 = new SmartPhone();
 
 echo "<pre>";
