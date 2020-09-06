@@ -22,7 +22,7 @@ class ClassicPhone {
         // gọi đến private trực tiếp từ bản thân bên trong class đó
         $this->receivePhone();
     }
-    
+
     public function abcGetPhoneNumber() {
         return $this->phone_number;
     }
