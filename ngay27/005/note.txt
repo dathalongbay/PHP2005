@@ -1,0 +1,7 @@
+
+include là nạp file nếu ko có file cần nạp thì vẫn chạy tiếp xuống các dòng bên dưới
+require là yêu câu file bắt buộc nếu ko file cần nạp vào thì lỗi và dừng lại không chạy tiếp nữa
+
+include_once chỉ nạp 1 lần duy nhất
+include gọi 3 lần thì nạp 3 lần
+require vs require_once tương tự
