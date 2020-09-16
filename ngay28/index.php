@@ -24,23 +24,18 @@ require_once SITE_PATH."/"."connect.php";
 
 <?php
 $stmt = $pdo->query('SELECT * FROM books');
+$stmt->setFetchMode(PDO::FETCH_OBJ);
+$books = $stmt->fetchAll();
+echo "<pre>";
+print_r($books);
 
-while ($row = $stmt->fetch())
-{
-
-    echo $row['id'] . "<br>";
-    echo $row['book_name'] . "<br>";
-    echo $row['book_intro'] . "<br>";
-    echo $row['book_image'] . "<br>";
-
-}
 ?>
 
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
                 <h1>Liệt kê sách</h1>
-                <a href="" class="btn btn-success">Thêm sách</a>
+                <a href="<?php echo SITE_URL."create.php" ?>" class="btn btn-success">Thêm sách</a>
             </div>
             <div class="col-sm-12">
                 <table class="table">
@@ -52,24 +47,17 @@ while ($row = $stmt->fetch())
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>John</td>
-                        <td>Doe</td>
-                        <td>
-                            <a href="" class="btn btn-warning">Sửa sách</a>
-                            <a href="" class="btn btn-danger">Xóa sách</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Mary</td>
-                        <td>Moe</td>
-                        <td>mary@example.com</td>
-                    </tr>
-                    <tr>
-                        <td>July</td>
-                        <td>Dooley</td>
-                        <td>july@example.com</td>
-                    </tr>
+                    <?php foreach($books as $book) : ?>
+                        <tr>
+                            <td><?php echo $book->id ?></td>
+                            <td><?php echo $book->book_name ?></td>
+                            <td>
+                                <a href="<?php echo SITE_URL."edit.php?id=".$book->id ?>" class="btn btn-warning">Sửa sách</a>
+                                <a href="<?php echo SITE_URL."delete.php?id=".$book->id ?>" class="btn btn-danger">Xóa sách</a>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+
                     </tbody>
                 </table>
             </div>
