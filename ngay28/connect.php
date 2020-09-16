@@ -22,9 +22,6 @@ try {
     // kết nối đến CSDL thì được gán cho biến $pdo
     $pdo = new PDO($dsn, $user, $pass, $options);
 
-    echo "<br> Kết nối thành công";
-
-
 }catch(PDOException $e) {
     echo "<br> Kết nối đến CSDL thất bại";
     die;
