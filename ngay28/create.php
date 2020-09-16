@@ -28,7 +28,7 @@ require_once SITE_PATH."/"."connect.php";
             <h1>Thêm sách</h1>
         </div>
         <div class="col-sm-12">
-            <form name="" method="post" action="">
+            <form name="" method="post" action="<?php echo SITE_URL."store.php" ?>">
                 <div class="form-group">
                     <label>Tên sách:</label>
                     <input type="text" class="form-control" name="book_name">

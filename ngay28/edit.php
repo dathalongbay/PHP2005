@@ -42,15 +42,15 @@ print_r($book);
             <form name="" method="post" action="">
                 <div class="form-group">
                     <label>Tên sách:</label>
-                    <input type="text" class="form-control" name="book_name" value="">
+                    <input type="text" class="form-control" name="book_name" value="<?php echo $book->book_name ?>">
                 </div>
                 <div class="form-group">
                     <label>Mô tả sách:</label>
-                    <input type="text" class="form-control" name="book_intro" value="">
+                    <input type="text" class="form-control" name="book_intro" value="<?php echo $book->book_intro ?>">
                 </div>
                 <div class="form-group">
                     <label>Ảnh sách:</label>
-                    <input type="text" class="form-control" name="book_image" value="">
+                    <input type="text" class="form-control" name="book_image" value="<?php echo $book->book_image ?>">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
