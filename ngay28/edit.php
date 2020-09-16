@@ -28,8 +28,7 @@ $stmt = $pdo->prepare('SELECT * FROM books WHERE id = ?');
 $stmt->execute([$id]);
 $stmt->setFetchMode(PDO::FETCH_OBJ);
 $book = $stmt->fetch();
-echo "<pre>";
-print_r($book);
+
 
 ?>
 
@@ -39,7 +38,7 @@ print_r($book);
             <h1>Sửa sách</h1>
         </div>
         <div class="col-sm-12">
-            <form name="" method="post" action="">
+            <form name="edit" method="post" action="<?php echo SITE_URL."update.php?id=".$id ?>">
                 <div class="form-group">
                     <label>Tên sách:</label>
                     <input type="text" class="form-control" name="book_name" value="<?php echo $book->book_name ?>">
