@@ -1,3 +1,13 @@
+<?php
+
+// __FILE__ trả ra đường dẫn hiện tại trên ổ đĩa
+// vd : C:\xampp\htdocs\PHP2005\ngay28\index.php
+// dirname(__FILE__) trả về đường dẫn của thư mục chưa file hiện tại
+define("SITE_PATH", dirname(__FILE__));
+define("SITE_URL", "http://localhost/PHP2005/ngay28/");
+
+require_once SITE_PATH."/"."connect.php";
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,13 +15,37 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    <title>Document</title>
-
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Document</title>
 </head>
 <body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Thêm sách</h1>
+        </div>
+        <div class="col-sm-12">
+            <form name="" method="post" action="">
+                <div class="form-group">
+                    <label>Tên sách:</label>
+                    <input type="text" class="form-control" name="book_name">
+                </div>
+                <div class="form-group">
+                    <label>Mô tả sách:</label>
+                    <input type="text" class="form-control" name="book_intro">
+                </div>
+                <div class="form-group">
+                    <label>Ảnh sách:</label>
+                    <input type="text" class="form-control" name="book_image">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
