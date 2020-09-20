@@ -4,7 +4,10 @@
 // vd : C:\xampp\htdocs\PHP2005\ngay28\index.php
 // dirname(__FILE__) trả về đường dẫn của thư mục chưa file hiện tại
 define("SITE_PATH", dirname(__FILE__));
+define("SITE_UPLOAD", SITE_PATH."/uploads");
 define("SITE_URL", "http://localhost/PHP2005/ngay28va29/");
+define("FILE_URL", SITE_URL."uploads/");
+
 
 require_once SITE_PATH."/"."connect.php";
 ?>
@@ -40,7 +43,6 @@ require_once SITE_PATH."/"."connect.php";
                 <div class="form-group">
                     <label>Ảnh sách:</label>
                     <input type="file" name="book_image_file">
-                    <input type="text" class="form-control" name="book_image">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

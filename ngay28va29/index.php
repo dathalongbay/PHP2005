@@ -4,7 +4,10 @@
 // vd : C:\xampp\htdocs\PHP2005\ngay28\index.php
 // dirname(__FILE__) trả về đường dẫn của thư mục chưa file hiện tại
 define("SITE_PATH", dirname(__FILE__));
+define("SITE_UPLOAD", SITE_PATH."/uploads");
 define("SITE_URL", "http://localhost/PHP2005/ngay28va29/");
+define("FILE_URL", SITE_URL."uploads/");
+
 
 require_once SITE_PATH."/"."connect.php";
 ?>
@@ -26,8 +29,6 @@ require_once SITE_PATH."/"."connect.php";
 $stmt = $pdo->query('SELECT * FROM books');
 $stmt->setFetchMode(PDO::FETCH_OBJ);
 $books = $stmt->fetchAll();
-echo "<pre>";
-print_r($books);
 
 ?>
 
@@ -43,6 +44,7 @@ print_r($books);
                     <tr>
                         <th>ID</th>
                         <th>Tên sách</th>
+                        <th>Ảnh sách</th>
                         <th>Hành động</th>
                     </tr>
                     </thead>
@@ -51,6 +53,14 @@ print_r($books);
                         <tr>
                             <td><?php echo $book->id ?></td>
                             <td><?php echo $book->book_name ?></td>
+                            <td>
+                                <?php
+                                if (strlen($book->book_image) > 0) {
+                                    echo "<img style='width:100px' src='".FILE_URL.$book->book_image."' />";
+                                }
+                                ?>
+
+                            </td>
                             <td>
                                 <a href="<?php echo SITE_URL."edit.php?id=".$book->id ?>" class="btn btn-warning">Sửa sách</a>
                                 <a href="<?php echo SITE_URL."delete.php?id=".$book->id ?>" class="btn btn-danger">Xóa sách</a>
