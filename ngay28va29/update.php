@@ -1,6 +1,6 @@
 <?php
 define("SITE_PATH", dirname(__FILE__));
-define("SITE_URL", "http://localhost/PHP2005/ngay28/");
+define("SITE_URL", "http://localhost/PHP2005/ngay28va29/");
 
 require_once SITE_PATH."/"."connect.php";
 

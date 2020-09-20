@@ -4,7 +4,7 @@
 // vd : C:\xampp\htdocs\PHP2005\ngay28\index.php
 // dirname(__FILE__) trả về đường dẫn của thư mục chưa file hiện tại
 define("SITE_PATH", dirname(__FILE__));
-define("SITE_URL", "http://localhost/PHP2005/ngay28/");
+define("SITE_URL", "http://localhost/PHP2005/ngay28va29/");
 
 require_once SITE_PATH."/"."connect.php";
 ?>
@@ -28,7 +28,7 @@ require_once SITE_PATH."/"."connect.php";
             <h1>Thêm sách</h1>
         </div>
         <div class="col-sm-12">
-            <form name="" method="post" action="<?php echo SITE_URL."store.php" ?>">
+            <form name="" method="post" action="<?php echo SITE_URL."store.php" ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label>Tên sách:</label>
                     <input type="text" class="form-control" name="book_name">
@@ -39,6 +39,7 @@ require_once SITE_PATH."/"."connect.php";
                 </div>
                 <div class="form-group">
                     <label>Ảnh sách:</label>
+                    <input type="file" name="book_image_file">
                     <input type="text" class="form-control" name="book_image">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>

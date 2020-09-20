@@ -4,7 +4,7 @@
 // vd : C:\xampp\htdocs\PHP2005\ngay28\index.php
 // dirname(__FILE__) trả về đường dẫn của thư mục chưa file hiện tại
 define("SITE_PATH", dirname(__FILE__));
-define("SITE_URL", "http://localhost/PHP2005/ngay28/");
+define("SITE_URL", "http://localhost/PHP2005/ngay28va29/");
 
 require_once SITE_PATH."/"."connect.php";
 ?>
@@ -35,23 +35,24 @@ $book = $stmt->fetch();
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h1>Sửa sách</h1>
+            <h1>Xóa sách</h1>
         </div>
         <div class="col-sm-12">
-            <form name="edit" method="post" action="<?php echo SITE_URL."update.php?id=".$id ?>">
+            <form name="delete" method="post" action="<?php echo SITE_URL."destroy.php?id=".$id ?>">
+
                 <div class="form-group">
                     <label>Tên sách:</label>
-                    <input type="text" class="form-control" name="book_name" value="<?php echo $book->book_name ?>">
+                    <?php echo $book->book_name ?>
                 </div>
                 <div class="form-group">
                     <label>Mô tả sách:</label>
-                    <input type="text" class="form-control" name="book_intro" value="<?php echo $book->book_intro ?>">
+                    <?php echo $book->book_intro ?>
                 </div>
                 <div class="form-group">
                     <label>Ảnh sách:</label>
-                    <input type="text" class="form-control" name="book_image" value="<?php echo $book->book_image ?>">
+                    <?php echo $book->book_image ?>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Xóa sách</button>
             </form>
         </div>
     </div>
