@@ -1,4 +1,5 @@
 <?php
+session_start();
 define("SITE_PATH", dirname(__FILE__));
 define("SITE_UPLOAD", SITE_PATH."/uploads");
 define("SITE_URL", "http://localhost/PHP2005/ngay28va29/");

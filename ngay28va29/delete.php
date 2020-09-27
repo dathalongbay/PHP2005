@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 // __FILE__ trả ra đường dẫn hiện tại trên ổ đĩa
 // vd : C:\xampp\htdocs\PHP2005\ngay28\index.php
 // dirname(__FILE__) trả về đường dẫn của thư mục chưa file hiện tại

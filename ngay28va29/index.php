@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 // __FILE__ trả ra đường dẫn hiện tại trên ổ đĩa
 // vd : C:\xampp\htdocs\PHP2005\ngay28\index.php
 // dirname(__FILE__) trả về đường dẫn của thư mục chưa file hiện tại
@@ -29,7 +29,10 @@ require_once SITE_PATH."/"."connect.php";
 $stmt = $pdo->query('SELECT * FROM books');
 $stmt->setFetchMode(PDO::FETCH_OBJ);
 $books = $stmt->fetchAll();
-
+if (isset($_SESSION["errorsMessage"]) && !empty($_SESSION["errorsMessage"])) {
+    echo "<div style='color:red'>".$_SESSION["errorsMessage"]."</div>";
+    unset($_SESSION["errorsMessage"]);
+}
 ?>
 
     <div class="container">

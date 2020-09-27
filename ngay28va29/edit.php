@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 // __FILE__ trả ra đường dẫn hiện tại trên ổ đĩa
 // vd : C:\xampp\htdocs\PHP2005\ngay28\index.php
 // dirname(__FILE__) trả về đường dẫn của thư mục chưa file hiện tại
@@ -53,7 +53,13 @@ $book = $stmt->fetch();
                 <div class="form-group">
                     <label>Ảnh sách:</label>
                     <input type="file" name="book_image_file">
-                    <input type="text" class="form-control" name="book_image" value="<?php echo $book->book_image ?>">
+                    <?php
+                    if (strlen($book->book_image) > 0) {
+                        echo "<img style='width:100px' src='".FILE_URL.$book->book_image."' />";
+                    }
+
+                    ?>
+                    <input type="hidden" name="book_image" value="<?php echo $book->book_image ?>" />
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
